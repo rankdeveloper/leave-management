@@ -5,8 +5,8 @@ import { editProfile, getProfile } from "../controllers/profile.js";
 
 const router = express.Router();
 
-router.get("/", authenticate, requireRole("employee"), getProfile);
+router.get("/", authenticate, getProfile);
 
-router.put("/", authenticate, requireRole("employee"), editProfile);
+router.put("/", authenticate, editProfile);
 
 export default router;

@@ -10,7 +10,7 @@ import {
 
 const router = express.Router();
 
-router.get("/", authenticate, requireRole("admin"), leaveTypes);
+router.get("/", authenticate, leaveTypes);
 
 router.post("/", authenticate, requireRole("admin"), addLeaveType);
 
